@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+  
+    <div class="flex min-h-screen">
+
+      
+        <aside class="w-64">
+            Sidebar
+        </aside>
+
+      
+<!-- flex-1 => remaining space -->
+<!-- flex-col => changes the direction to vertical:  -->
+<!-- items-center => ←──────────────→ controls the alignment on the cross-axis. -->
+<!-- justify-between => Put the first item at the beginning and the last item at the end, with space between them. -->
+<!-- p-6 => Add padding around the inside of the main element. -->
+<!-- max-w-5xl => maximum width is 5xl = 1024px  -->
+<!-- mx-auto => Center the element horizontally. -->
+
+        <div class="flex-1 flex flex-col"> 
+
+            <header class="flex items-center justify-between">
+                <span>Header gauche</span>
+                <span>Header droite</span>
+            </header>
+
+        
+            <main class="flex-1 p-6">
+             
+                <div class="max-w-5xl mx-auto">
+                    Contenu principal
+                </div>
+            </main>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex flex-col justify-center items-center min-h-screen">
+       
+            <form class="grid grid-cols-2 bg-gray-400 " id="form_1">
+                <label class="m-auto text-white"> name</label>
+                <input class="p-2 m-2 rounded-lg border focus:outline-none focus:border-blue-600" type="text" id="name_input">
+                <label class="m-auto  text-white">hobby</label>
+                <input class="p-2 m-2 rounded-lg border focus:outline-none focus:border-blue-600 " type="text" id="hobby_input">
+                <button class="border border-black text-black bg-white rounded-lg hover:outline-none hover:bg-black hover:text-white p-2 m-1 " type="submit">Add</button>
+            </form>
+       
+
+        <div class="m-2">
+            <table class="border-collapse border border-black">
+                <thead>
+                    <tr>
+                        <th class="border border-black p-2">id</th>
+                        <th class="border border-black p-2">name</th>
+                        <th class="border border-black p-2">hobby</th>
+                    </tr>
+                </thead>
+                <tbody id="result">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js.js">
+    </script>
+</body>
+</html>

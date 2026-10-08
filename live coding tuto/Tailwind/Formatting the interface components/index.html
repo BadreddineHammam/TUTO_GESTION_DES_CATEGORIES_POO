@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestion des catégories</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="flex min-h-screen">
+
+        <aside class="bg-gray-800 text-white p-6 w-64">
+
+            <h1 class="text-xl font-bold mb-8">
+                Administration
+            </h1>
+
+            <nav class="space-y-2">
+
+                <a href="#"
+                   class="block bg-blue-600 text-white rounded-lg p-3">
+                    Catégories
+                </a>
+
+                <a href="#"
+                   class="block text-gray-300 hover:bg-gray-700 rounded-lg p-3">
+                    Produits
+                </a>
+
+                <a href="#"
+                   class="block text-gray-300 hover:bg-gray-700 rounded-lg p-3">
+                    Utilisateurs
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <div class="flex-1">
+
+            <header class="bg-white shadow-sm border-b p-6">
+
+                <div class="flex justify-between items-center">
+
+                    <h2 class="text-2xl font-bold">
+                        Gestion des catégories
+                    </h2>
+
+                    <button
+                        id="button_show"
+                        type="button"
+                        class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                        Nouvelle catégorie
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <main class="p-6">
+
+
+                <form
+                    id="form_1"
+                    class="bg-white p-6 rounded-lg shadow mb-6">
+
+                    <div class="mb-4">
+
+                        <label
+                            for="name_input"
+                            class="block mb-2 font-medium">
+                            Nom
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name_input"
+                            class="border border-gray-300 rounded-lg w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+                    </div>
+
+
+                    <div class="mb-4">
+
+                        <label
+                            for="age_input"
+                            class="block mb-2 font-medium">
+                            Âge
+                        </label>
+
+                        <input
+                            type="number"
+                            id="age_input"
+                            class="border border-gray-300 rounded-lg w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                        Ajouter
+                    </button>
+
+                </form>
+
+
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+
+                    <table class="w-full">
+
+                        <thead>
+
+                            <tr class="bg-gray-50 text-left text-xs text-gray-500 uppercase">
+
+                                <th class="p-4">
+                                    ID
+                                </th>
+
+                                <th class="p-4">
+                                    Nom
+                                </th>
+
+                                <th class="p-4">
+                                    Âge
+                                </th>
+
+                                <th class="p-4">
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="result">
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <script src="manipulat.js"></script>
+
+</body>
+
+</html>

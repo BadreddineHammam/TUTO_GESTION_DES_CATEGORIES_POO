@@ -29,6 +29,6 @@ classDiagram
         -DateTime date_creation
     }
 
-    User "1" -- "0..1" Auteur : possède
-    Auteur "1" -- "0..*" Article : rédige
-    Categorie "1" -- "0..*" Article : contient
+    User "(0,1)" -- "(0,1)" Auteur : possède
+    Auteur "(0,1)" -- "(1,N)" Article : rédige
+    Categorie "(0,1)" -- "(1,N)" Article : contient

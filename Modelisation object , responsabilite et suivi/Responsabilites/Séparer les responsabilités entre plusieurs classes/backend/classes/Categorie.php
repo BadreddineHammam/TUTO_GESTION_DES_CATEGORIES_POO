@@ -25,19 +25,21 @@
             return $this->icone;
         }
 
-
-
         public function setNom(string $nom): void {
             $this->nom = $nom;
         }
-        
         public function setCouleur(string $couleur): void {
             $this->couleur = $couleur;
         }
-        
         public function setIcone(string $icone): void {
             $this->icone = $icone;
         }
-        
+
+        public function __get($name) {
+            if (property_exists($this, $name)) {
+                return $this->$name;
+            }
+            return null;
+        }
     }
 ?>

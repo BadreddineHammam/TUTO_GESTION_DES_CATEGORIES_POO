@@ -1,0 +1,20 @@
+[
+    {
+        "id" : 1 ,
+        "nom" : "Ahmed" ,
+        "couleur" : "bleu" ,
+        "icone" : "star" 
+    },
+    {
+        "id" : 2 ,
+        "nom" : "Omar" ,
+        "couleur" : "red" ,
+        "icone" : "cercle" 
+    },
+    {
+        "id" : 3 ,
+        "nom" : "Khalid" ,
+        "couleur" : "orange" ,
+        "icone" : "square" 
+    }
+]

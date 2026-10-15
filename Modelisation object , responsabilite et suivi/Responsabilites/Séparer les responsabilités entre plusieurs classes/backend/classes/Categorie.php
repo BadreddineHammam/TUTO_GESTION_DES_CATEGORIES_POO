@@ -24,5 +24,20 @@
         public function getIcone() : string {
             return $this->icone;
         }
+
+
+
+        public function setNom(string $nom): void {
+            $this->nom = $nom;
+        }
+        
+        public function setCouleur(string $couleur): void {
+            $this->couleur = $couleur;
+        }
+        
+        public function setIcone(string $icone): void {
+            $this->icone = $icone;
+        }
+        
     }
 ?>

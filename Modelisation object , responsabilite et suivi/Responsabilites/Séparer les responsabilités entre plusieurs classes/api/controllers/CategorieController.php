@@ -1,11 +1,14 @@
 <?php
 require_once '../../backend/classes/GestionCategorie.php';
-class CategorieController {
-    public function listerCategories(): void {
+class CategorieController 
+{
+    public function listerCategories(): void 
+    {
         $gestion = new GestionCategorie();
         $categories = $gestion->getAll();
         
-        foreach ($categories as $cat) {
+        foreach ($categories as $cat)
+        {
             echo $cat->getNom();
         }
     }
@@ -13,5 +16,4 @@ class CategorieController {
 
 $controller = new CategorieController();
 $controller->listerCategories();
-?>
 ?>

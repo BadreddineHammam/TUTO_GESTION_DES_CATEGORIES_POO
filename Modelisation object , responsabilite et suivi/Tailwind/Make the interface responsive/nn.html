@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blog Admin Dashboard</title>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Main layout -->
+    <div class="flex flex-row min-h-screen">
+
+        <!-- Sidebar -->
+        <aside class="hidden md:block w-64 bg-gray-900 text-white p-6">
+            <h2 class="text-xl font-bold mb-8">My Blog</h2>
+
+            <nav class="space-y-4">
+                <p class="text-gray-400">Dashboard</p>
+                <p class="font-bold">Categories</p>
+                <p class="text-gray-400">Articles</p>
+                <p class="text-gray-400">Settings</p>
+            </nav>
+        </aside>
+
+        <!-- Main content -->
+        <main class="flex-1 p-6">
+
+            <h1 class="text-2xl font-bold mb-6">
+                Manage Categories
+            </h1>
+
+            <!-- Category form -->
+            <section class="bg-white p-6 rounded-lg shadow mb-8">
+                <h2 class="text-lg font-semibold mb-4">
+                    Add a category
+                </h2>
+
+                <form id="categoryForm"
+                      class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                    <input
+                        id="categoryName"
+                        type="text"
+                        placeholder="Category name"
+                        required
+                        class="border rounded p-3 w-full"
+                    >
+
+                    <input
+                        id="categoryDescription"
+                        type="text"
+                        placeholder="Description"
+                        required
+                        class="border rounded p-3 w-full"
+                    >
+
+                    <button
+                        type="submit"
+                        class="bg-blue-600 text-white rounded p-3 md:col-span-2 hover:bg-blue-700"
+                    >
+                        Add Category
+                    </button>
+                </form>
+            </section>
+
+            <!-- Category table -->
+            <section class="bg-white p-6 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-4">
+                    Category List
+                </h2>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-200">
+                                <th class="p-3">ID</th>
+                                <th class="p-3">Name</th>
+                                <th class="p-3">Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="categoryList">
+                            <tr class="border-b">
+                                <td class="p-3">1</td>
+                                <td class="p-3">Technology</td>
+                                <td class="p-3">Tech news and tutorials</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Small JavaScript demo -->
+    <script>
+        const form = document.getElementById("categoryForm");
+        const categoryList = document.getElementById("categoryList");
+        let nextId = 2;
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("categoryName").value;
+            const description = document.getElementById("categoryDescription").value;
+
+            const row = document.createElement("tr");
+            row.className = "border-b";
+
+            const idCell = document.createElement("td");
+            idCell.className = "p-3";
+            idCell.textContent = nextId++;
+
+            const nameCell = document.createElement("td");
+            nameCell.className = "p-3";
+            nameCell.textContent = name;
+
+            const descriptionCell = document.createElement("td");
+            descriptionCell.className = "p-3";
+            descriptionCell.textContent = description;
+
+            row.append(idCell, nameCell, descriptionCell);
+            categoryList.appendChild(row);
+
+            form.reset();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+#toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.toast {
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.toast-success {
+    background-color: green;
+}
+
+.toast-error {
+    background-color: red;
+}

@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Categories</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+    <h1>Manage Categories</h1>
+<div id="toast-container">
+
+</div>
+
+
+    <form id="categoryForm">
+        <input
+            type="text"
+            id="categoryName"
+            name="name"
+            placeholder="Enter category name"
+            required
+        >
+
+        <button type="submit" id="btnSubmitForm">
+            Save
+        </button>
+    </form>
+
+    <p id="message"></p>
+
+    <h2>Categories</h2>
+    <ul id="categoryList"></ul>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

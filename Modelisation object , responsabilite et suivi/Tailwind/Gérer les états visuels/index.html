@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Administration</title>
+    <!-- Intégration de Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Conteneur flex (colonne sur mobile, ligne sur PC) -->
+    <div class="flex flex-col md:flex-row min-h-screen">
+
+        <!-- Sidebar (cachée sur mobile, visible sur md) -->
+        <aside class="hidden md:block w-64 bg-slate-900 text-white p-6">
+            <h2 class="text-2xl font-bold mb-6">Mon Blog</h2>
+            <nav>
+                <a href="#" class="block py-2 px-4 bg-slate-800 rounded hover:bg-slate-700 transition duration-200">
+                    Catégories
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Contenu principal -->
+        <main class="flex-1 p-4 md:p-8">
+            <h1 class="text-3xl font-bold mb-6">Gestion des Catégories</h1>
+
+            <!-- Formulaire (1 col mobile, 2 cols PC) -->
+            <form id="form-categorie" class="bg-white p-6 rounded shadow mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <!-- Champ Nom -->
+                <div>
+                    <label for="nom" class="block text-sm font-semibold mb-1">Nom</label>
+                    <input type="text" id="nom" name="nom" required
+                           class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+                </div>
+
+                <!-- Champ Couleur -->
+                <div>
+                    <label for="couleur" class="block text-sm font-semibold mb-1">Couleur</label>
+                    <input type="text" id="couleur" name="couleur" required
+                           class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+                </div>
+
+                <!-- Champ Icône -->
+                <div class="md:col-span-2">
+                    <label for="icone" class="block text-sm font-semibold mb-1">Icône</label>
+                    <input type="text" id="icone" name="icone" required
+                           class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+                </div>
+
+                <!-- Bouton d'enregistrement -->
+                <div class="md:col-span-2 mt-4">
+                    <button type="submit" id="btn-submit-form"
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded flex items-center gap-2
+                                   transition duration-200 ease-in-out
+                                   disabled:opacity-75 disabled:cursor-not-allowed">
+
+                        <!-- Spinner SVG (caché par défaut) -->
+                        <svg id="spinner-submit" class="hidden w-4 h-4 animate-spin text-white" 
+                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" 
+                                    stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" 
+                                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 
+                                     7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+
+                        <span id="text-submit">Enregistrer</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Tableau responsive -->
+            <div class="overflow-x-auto bg-white p-6 rounded shadow">
+                <table class="w-full text-left border-collapse min-w-[600px]">
+                    <thead>
+                        <tr class="border-b">
+                            <th class="py-2 px-4">ID</th>
+                            <th class="py-2 px-4">Nom</th>
+                            <th class="py-2 px-4">Couleur</th>
+                            <th class="py-2 px-4">Icône</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-categories-body">
+                        <!-- Rempli dynamiquement -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Conteneur des Toasts -->
+            <div id="toast-container" class="fixed bottom-4 right-4 flex flex-col gap-2 z-50"></div>
+        </main>
+
+    </div>
+
+    <!-- JS de l'application -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

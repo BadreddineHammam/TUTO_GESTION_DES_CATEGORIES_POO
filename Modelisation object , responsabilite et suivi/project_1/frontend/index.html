@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Categories</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body >
+
+  
+
+        <h1 >
+            Manage Categories
+        </h1>
+
+
+        <form id="categoryForm" >
+
+            <input
+                type="text"
+                id="categoryName"
+                name="name"
+                placeholder="Enter category name"
+                required  
+            >
+
+            <button
+                type="submit"
+                id="botona"
+                class="bg-blue-600 text-white"
+                
+            >
+                <span
+                    id="spinner"
+                    class="hidden text-black animate-spin inline-block border-4 border-white border-t-transparent rounded-full w-4 h-4"
+                >Loading...</span>
+
+                Save
+            </button>
+
+        </form>
+
+        <p id="message" ></p>
+
+        <h2 >
+            Categories
+        </h2>
+
+        <ul id="categoryList" ></ul>
+
+        <div id="toast-container"
+          class="fixed top-5 right-5 w-40">
+        </div>
+
+    
+
+    <script src="../asset/js.js"></script>
+
+</body>
+</html>
